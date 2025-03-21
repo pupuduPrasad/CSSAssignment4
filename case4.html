@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case4</title>
+  <style>
+      section{
+          position: relative;
+          display: flex;
+          overflow: hidden;
+          width: 100vw;
+          height: 100vh;
+          align-items: center;
+          justify-content: center;
+      }
+    section div{
+      width: 20px;
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: transparent;
+      border-radius: 100%;
+      border: 10px solid red;
+
+      animation:water-drop 1.5s ease infinite;
+
+    }
+    section>h2{
+        position: absolute;
+
+    }
+
+    @keyframes  water-drop{
+      from{
+
+      }to{
+          width: 500px;
+          aspect-ratio: 1/1;
+          opacity: 0;
+             }
+    }
+  </style>
+</head>
+<body>
+<section>
+  <div></div>
+    <h2>hii</h2>
+</section>
+</body>
+</html>
