@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="lib/normalize.css">
+  <title>case 2</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: blue;
+      margin: 0;
+    }
+
+    .circle-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .outer-circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 15px solid white;
+      position: absolute;
+    }
+
+    .progress-ring {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 15px solid transparent;
+      border-top: 15px solid red;
+    }
+
+    .inner-circle {
+      width: 200px;
+      height: 200px;
+      background: gray;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+    }
+
+    .circle-container:hover .progress-ring {
+      animation: spin-once 1s ease-in-out 1;
+    }
+
+    @keyframes spin-once {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="circle-container">
+  <div class="outer-circle"></div>
+  <div class="progress-ring"></div>
+  <div class="inner-circle">RWAD</div>
+</div>
+</body>
+</html>
